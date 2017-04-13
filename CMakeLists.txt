@@ -258,6 +258,7 @@ string (REGEX REPLACE "([^\\]|^);" "\\1," resources_string "${resources}")
 string (REGEX REPLACE "[\\](.)" "\\1" resources_string "${resources_string}")
 
 # Create command line for running bin2c cmake script
+add_executable(bin2c resources/bin2c.c)
 set(bin2c_cmdline
   -DOUTPUT_C=nanogui_resources.cpp
   -DOUTPUT_H=nanogui_resources.h
