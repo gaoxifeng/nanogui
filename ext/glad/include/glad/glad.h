@@ -78,7 +78,9 @@ GLAPI struct gladGLversionStruct GLVersion;
 GLAPI int gladLoadGLLoader(GLADloadproc);
 
 #include <stddef.h>
+#if defined(_WINDOWS)
 #include <../../glad/include/KHR/khrplatform.h>
+#endif
 #ifndef GLEXT_64_TYPES_DEFINED
 /* This code block is duplicated in glxext.h, so must be protected */
 #define GLEXT_64_TYPES_DEFINED
